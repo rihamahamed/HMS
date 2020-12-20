@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31E4F36F-CDBB-480D-9638-73FD07EEF282}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HMS</RootNamespace>
+    <AssemblyName>HMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Assigement\IDM\Semester 1\01 Programming\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B8860B8304DB24D8D000152075C85EDE34E60183</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>HMS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm_drugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_drugs.Designer.cs">
+      <DependentUpon>frm_drugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_innovice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_innovice.Designer.cs">
+      <DependentUpon>frm_innovice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_mdr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_mdr.Designer.cs">
+      <DependentUpon>frm_mdr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_mnu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_mnu.Designer.cs">
+      <DependentUpon>frm_mnu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_patient.Designer.cs">
+      <DependentUpon>frm_patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_redru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_redru.Designer.cs">
+      <DependentUpon>frm_redru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_reinn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_reinn.Designer.cs">
+      <DependentUpon>frm_reinn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_repat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_repat.Designer.cs">
+      <DependentUpon>frm_repat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_resupp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_resupp.Designer.cs">
+      <DependentUpon>frm_resupp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Supplier.Designer.cs">
+      <DependentUpon>frm_Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HMSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMSDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HMSDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMSDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HMSDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMSDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HMSDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMSDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_drugs.resx">
+      <DependentUpon>frm_drugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_innovice.resx">
+      <DependentUpon>frm_innovice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_mdr.resx">
+      <DependentUpon>frm_mdr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_mnu.resx">
+      <DependentUpon>frm_mnu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_patient.resx">
+      <DependentUpon>frm_patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_redru.resx">
+      <DependentUpon>frm_redru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_reinn.resx">
+      <DependentUpon>frm_reinn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_repat.resx">
+      <DependentUpon>frm_repat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_resupp.resx">
+      <DependentUpon>frm_resupp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Supplier.resx">
+      <DependentUpon>frm_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="HMSDataSet.xsc">
+      <DependentUpon>HMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HMSDataSet.xss">
+      <DependentUpon>HMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet1.xsc">
+      <DependentUpon>HMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HMSDataSet1.xss">
+      <DependentUpon>HMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet2.xsc">
+      <DependentUpon>HMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HMSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HMSDataSet2.xss">
+      <DependentUpon>HMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet3.xsc">
+      <DependentUpon>HMSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HMSDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HMSDataSet3.xss">
+      <DependentUpon>HMSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet4.xsc">
+      <DependentUpon>HMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HMSDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HMSDataSet4.xss">
+      <DependentUpon>HMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet5.xsc">
+      <DependentUpon>HMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HMSDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HMSDataSet5.xss">
+      <DependentUpon>HMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HMS_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HMS.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HMS_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>HMS.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
