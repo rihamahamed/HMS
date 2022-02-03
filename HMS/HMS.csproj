@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\Assigement\IDM\Semester 1\01 Programming\</PublishUrl>
+    <PublishUrl>D:\IDM\Assigement\Semester 1\01 Programming\L03 L04\HMS\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -170,6 +170,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HMSDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HMSDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMSDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_drugs.resx">
@@ -279,6 +284,17 @@
     </None>
     <None Include="HMSDataSet5.xss">
       <DependentUpon>HMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet6.xsc">
+      <DependentUpon>HMSDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HMSDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HMSDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HMSDataSet6.xss">
+      <DependentUpon>HMSDataSet6.xsd</DependentUpon>
     </None>
     <None Include="HMS_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">

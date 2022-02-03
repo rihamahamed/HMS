@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_patient));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,7 +50,18 @@
             this.cmb_patgen = new System.Windows.Forms.ComboBox();
             this.btn_patsubmit = new System.Windows.Forms.Button();
             this.btn_patclear = new System.Windows.Forms.Button();
+            this.dgv_Patient = new System.Windows.Forms.DataGridView();
+            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hMSDataSet6 = new HMS.HMSDataSet6();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.patientTableAdapter = new HMS.HMSDataSet6TableAdapters.PatientTableAdapter();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Patient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMSDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,14 +79,14 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(380, 60);
+            this.panel1.Size = new System.Drawing.Size(735, 60);
             this.panel1.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 15);
+            this.label2.Location = new System.Drawing.Point(211, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(333, 31);
             this.label2.TabIndex = 0;
@@ -220,9 +232,9 @@
             // 
             // btn_patsubmit
             // 
-            this.btn_patsubmit.Location = new System.Drawing.Point(166, 398);
+            this.btn_patsubmit.Location = new System.Drawing.Point(166, 390);
             this.btn_patsubmit.Name = "btn_patsubmit";
-            this.btn_patsubmit.Size = new System.Drawing.Size(75, 23);
+            this.btn_patsubmit.Size = new System.Drawing.Size(75, 31);
             this.btn_patsubmit.TabIndex = 10;
             this.btn_patsubmit.Text = "Submit";
             this.btn_patsubmit.UseVisualStyleBackColor = true;
@@ -230,19 +242,86 @@
             // 
             // btn_patclear
             // 
-            this.btn_patclear.Location = new System.Drawing.Point(281, 398);
+            this.btn_patclear.Location = new System.Drawing.Point(281, 390);
             this.btn_patclear.Name = "btn_patclear";
-            this.btn_patclear.Size = new System.Drawing.Size(75, 23);
+            this.btn_patclear.Size = new System.Drawing.Size(75, 31);
             this.btn_patclear.TabIndex = 11;
             this.btn_patclear.Text = "Clear";
             this.btn_patclear.UseVisualStyleBackColor = true;
             this.btn_patclear.Click += new System.EventHandler(this.btn_patclear_Click);
             // 
+            // dgv_Patient
+            // 
+            this.dgv_Patient.AllowUserToAddRows = false;
+            this.dgv_Patient.AllowUserToDeleteRows = false;
+            this.dgv_Patient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Patient.Location = new System.Drawing.Point(362, 112);
+            this.dgv_Patient.Name = "dgv_Patient";
+            this.dgv_Patient.ReadOnly = true;
+            this.dgv_Patient.Size = new System.Drawing.Size(360, 266);
+            this.dgv_Patient.TabIndex = 12;
+            this.dgv_Patient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Patient_CellContentClick);
+            // 
+            // patientBindingSource
+            // 
+            this.patientBindingSource.DataMember = "Patient";
+            this.patientBindingSource.DataSource = this.hMSDataSet6;
+            // 
+            // hMSDataSet6
+            // 
+            this.hMSDataSet6.DataSetName = "HMSDataSet6";
+            this.hMSDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txt_search
+            // 
+            this.txt_search.Location = new System.Drawing.Point(502, 81);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(220, 22);
+            this.txt_search.TabIndex = 13;
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
+            // 
+            // patientTableAdapter
+            // 
+            this.patientTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_update
+            // 
+            this.btn_update.Location = new System.Drawing.Point(392, 390);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(76, 31);
+            this.btn_update.TabIndex = 15;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(568, 390);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(76, 31);
+            this.btn_delete.TabIndex = 15;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(373, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(126, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Search by PatientID";
+            // 
             // frm_patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 439);
+            this.ClientSize = new System.Drawing.Size(734, 439);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.txt_search);
+            this.Controls.Add(this.dgv_Patient);
             this.Controls.Add(this.btn_patclear);
             this.Controls.Add(this.btn_patsubmit);
             this.Controls.Add(this.cmb_patbtype);
@@ -261,6 +340,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -270,6 +350,9 @@
             this.Load += new System.EventHandler(this.frm_patient_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Patient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMSDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,5 +380,13 @@
         private System.Windows.Forms.ComboBox cmb_patgen;
         private System.Windows.Forms.Button btn_patsubmit;
         private System.Windows.Forms.Button btn_patclear;
+        private System.Windows.Forms.DataGridView dgv_Patient;
+        private System.Windows.Forms.TextBox txt_search;
+        private HMSDataSet6 hMSDataSet6;
+        private System.Windows.Forms.BindingSource patientBindingSource;
+        private HMSDataSet6TableAdapters.PatientTableAdapter patientTableAdapter;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Label label5;
     }
 }

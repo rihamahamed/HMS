@@ -41,14 +41,20 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgv_drugs = new System.Windows.Forms.DataGridView();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_drugs)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_drcl
             // 
-            this.btn_drcl.Location = new System.Drawing.Point(280, 264);
+            this.btn_drcl.Location = new System.Drawing.Point(280, 288);
             this.btn_drcl.Name = "btn_drcl";
-            this.btn_drcl.Size = new System.Drawing.Size(75, 23);
+            this.btn_drcl.Size = new System.Drawing.Size(75, 31);
             this.btn_drcl.TabIndex = 7;
             this.btn_drcl.Text = "Clear";
             this.btn_drcl.UseVisualStyleBackColor = true;
@@ -56,9 +62,9 @@
             // 
             // btn_drsub
             // 
-            this.btn_drsub.Location = new System.Drawing.Point(165, 264);
+            this.btn_drsub.Location = new System.Drawing.Point(165, 288);
             this.btn_drsub.Name = "btn_drsub";
-            this.btn_drsub.Size = new System.Drawing.Size(75, 23);
+            this.btn_drsub.Size = new System.Drawing.Size(75, 31);
             this.btn_drsub.TabIndex = 6;
             this.btn_drsub.Text = "Submit";
             this.btn_drsub.UseVisualStyleBackColor = true;
@@ -90,11 +96,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 15);
+            this.label2.Location = new System.Drawing.Point(225, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(333, 31);
             this.label2.TabIndex = 0;
             this.label2.Text = "NEW LANKA HOSPITAL";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txt_druid
             // 
@@ -109,7 +116,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(380, 60);
+            this.panel1.Size = new System.Drawing.Size(753, 60);
             this.panel1.TabIndex = 46;
             // 
             // label8
@@ -148,11 +155,65 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "Drugs ID";
             // 
+            // dgv_drugs
+            // 
+            this.dgv_drugs.AllowUserToAddRows = false;
+            this.dgv_drugs.AllowUserToDeleteRows = false;
+            this.dgv_drugs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_drugs.Location = new System.Drawing.Point(380, 115);
+            this.dgv_drugs.Name = "dgv_drugs";
+            this.dgv_drugs.ReadOnly = true;
+            this.dgv_drugs.Size = new System.Drawing.Size(346, 159);
+            this.dgv_drugs.TabIndex = 47;
+            this.dgv_drugs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_drugs_CellContentClick);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(577, 288);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(76, 31);
+            this.btn_delete.TabIndex = 50;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // btn_update
+            // 
+            this.btn_update.Location = new System.Drawing.Point(401, 288);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(76, 31);
+            this.btn_update.TabIndex = 51;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            // 
+            // txt_search
+            // 
+            this.txt_search.Location = new System.Drawing.Point(506, 87);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(220, 22);
+            this.txt_search.TabIndex = 49;
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(377, 93);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(126, 16);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Search by PatientID";
+            // 
             // frm_drugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 308);
+            this.ClientSize = new System.Drawing.Size(733, 328);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.txt_search);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dgv_drugs);
             this.Controls.Add(this.btn_drcl);
             this.Controls.Add(this.btn_drsub);
             this.Controls.Add(this.txt_supid);
@@ -169,8 +230,10 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_drugs";
             this.Text = "NEW LANKA HOSPITAL : DRUGS";
+            this.Load += new System.EventHandler(this.frm_drugs_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_drugs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +253,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgv_drugs;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.Label label5;
     }
 }

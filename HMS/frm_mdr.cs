@@ -40,5 +40,10 @@ namespace HMS
             frm_redru f4 = new frm_redru();
             f4.ShowDialog();
         }
+
+        private void frm_mdr_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

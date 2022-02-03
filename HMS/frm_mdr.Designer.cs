@@ -144,6 +144,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_mdr";
             this.Text = "NEW LANKA HOSPITAL : MAIN DOCTER";
+            this.Load += new System.EventHandler(this.frm_mdr_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
